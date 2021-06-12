@@ -16,14 +16,10 @@ use App\Http\Controllers\UserController;
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class,'index']);
-Route::get('/about', [HomeController::class,'about']);
-Route::get('/contact', [HomeController::class,'contact']);
-Route::get('/user', [UserController::class,'index']);
-Route::get('/calculator/sum/{num1}/{num2}', [CalculatorController::class,'sum']);
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/about', [HomeController::class, 'about']);
+Route::get('/contact', [HomeController::class, 'contact']);
+Route::get('/user', [UserController::class, 'index']);
+Route::get('/calculator/sum/{num1}/{num2}', [CalculatorController::class, 'sum']);
 
-Route::get('/สวัสดี/{name}/{surname}/{age}', [UserController::class,'index']);
-
-
-
-
+Route::get('/สวัสดี/{name}/{surname}/{age}', [UserController::class, 'hello']);
